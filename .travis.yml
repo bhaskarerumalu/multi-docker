@@ -19,10 +19,10 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
 
-  -docker tag bhaskarerumalu/multi-client:latest mypgdocker/multi-docker/client
-  -docker tag bhaskarerumalu/multi-nginx:latest mypgdocker/multi-docker/nginx
-  -docker tag bhaskarerumalu/multi-server:latest mypgdocker/multi-docker/server
-  -docker tag bhaskarerumalu/multi-worker:latest mypgdocker/multi-docker/worker
+  - docker tag bhaskarerumalu/multi-client:latest mypgdocker/multi-docker/client
+  - docker tag bhaskarerumalu/multi-nginx:latest mypgdocker/multi-docker/nginx
+  - docker tag bhaskarerumalu/multi-server:latest mypgdocker/multi-docker/server
+  - docker tag bhaskarerumalu/multi-worker:latest mypgdocker/multi-docker/worker
 
   - docker push mypgdocker/multi-docker/client
   - docker push mypgdocker/multi-docker/nginx
